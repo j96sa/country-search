@@ -1,0 +1,55 @@
+.form{
+    transform: translateX(110%);
+    position: fixed;
+    text-align: end;
+    //right: 5px;
+    right: 0;
+    top: 40px;    
+    transition: .4s ease-out;
+
+    &.active{
+        transform: translatex(0);
+    }
+
+    h2{
+        padding: 7px;
+        background: $white;        
+        //border: 1px solid $purple;
+        color: $purple;
+        -webkit-box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75); 
+        box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75);
+        cursor: pointer;
+    }
+
+    .input{
+        padding: 7px;
+        color: $purple;
+        -webkit-box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75); 
+        box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75);
+        background: $white;
+        
+        
+        input{            
+            border: none;
+            height: 35px;
+            width: 242px;
+            outline: none; 
+            cursor: pointer;           
+        }
+    }
+
+    button{
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 15px;
+        color: $purple;
+        background: $white;
+        border: none;
+        //border: 1px solid $purple;
+        -webkit-box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75); 
+        box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75);
+        padding: 10px 16px;
+        outline: none;
+    }
+
+}

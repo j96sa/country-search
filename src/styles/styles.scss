@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Kanit:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+//FONT-FAMILY
+$ff-js:'Josefin Sans', sans-serif;
+$ff-k: 'Kanit', sans-serif;
+$ff-ws: 'Work Sans', sans-serif;
+
+body,*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    padding: 13px;    
+    font-family: $ff-ws;
+    font-size: 1rem;    
+}
+
+
+//VARIABLES
+@import "./var";
+
+
+//COMPONENTS
+@import "./main";
+@import "./form";
+@import "./continent-card";
+@import "./scrollButton";

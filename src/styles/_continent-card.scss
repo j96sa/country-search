@@ -1,0 +1,15 @@
+.continent_card{    
+    width: 90%;
+    text-align: center;
+    margin: 70px auto 0 auto;
+    border:5px solid $white;
+    
+    &:first-child{
+        margin-top: 0;
+    }
+
+    img{
+        width: 100%;
+        border-bottom:5px solid $white ;
+    }
+}
