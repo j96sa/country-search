@@ -38,18 +38,28 @@
         }
     }
 
-    button{
-        font-size: 1rem;
-        cursor: pointer;
-        margin-top: 15px;
-        color: $purple;
-        background: $white;
-        border: none;
-        //border: 1px solid $purple;
-        -webkit-box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75); 
-        box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75);
-        padding: 10px 16px;
-        outline: none;
+    .btn{ 
+        button{
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            border: none;
+            -webkit-box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75); 
+            box-shadow: -9px 13px 18px 4px rgba(0,0,0,0.75);
+            padding: 10px 16px;
+            outline: none;                        
+
+            &.fav-btn{
+                color: $white;
+                background-color: #A5311E;
+                margin-right: 20px;                   
+                width: 196px;                
+            }
+            &.search-btn{
+                color: $purple;
+                background: $white;    
+            }
+        }
     }
 
 }

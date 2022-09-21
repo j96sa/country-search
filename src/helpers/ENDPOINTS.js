@@ -4,6 +4,7 @@ const EDNPOINTS = {
     language:"https://restcountries.com/v2/lang/"/* es */,
     capital:"https://restcountries.com/v2/capital/"/* habana */,
     all:"https://restcountries.com/v2/all",
+    code:"https://restcountries.com/v2/callingcode/"/* code */
 };
 
 export default EDNPOINTS;

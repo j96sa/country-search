@@ -47,16 +47,24 @@ body {
   outline: none;
   cursor: pointer;
 }
-.form button {
+.form .btn button {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 15px;
-  color: #8B4FB3;
-  background: #fff;
   border: none;
   box-shadow: -9px 13px 18px 4px rgba(0, 0, 0, 0.75);
   padding: 10px 16px;
   outline: none;
+}
+.form .btn button.fav-btn {
+  color: #fff;
+  background-color: #A5311E;
+  margin-right: 20px;
+  width: 196px;
+}
+.form .btn button.search-btn {
+  color: #8B4FB3;
+  background: #fff;
 }
 
 .continent_card {
@@ -87,4 +95,48 @@ body {
 }
 .scrollUpBtn.active {
   display: inline-block;
+}
+
+.countrie_card {
+  width: 90%;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  border: 5px solid #fff;
+}
+.countrie_card img {
+  width: 100%;
+  border-bottom: 5px solid #fff;
+}
+
+.countrie-info_card {
+  min-height: 100vh;
+  background: #8B4FB3;
+  font-family: "Kanit", sans-serif;
+}
+.countrie-info_card img:first-child {
+  width: 100%;
+}
+.countrie-info_card h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.countrie-info_card article {
+  margin-left: 5px;
+}
+.countrie-info_card article p {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.countrie-info_card article p span {
+  color: gold;
+}
+.countrie-info_card .btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.countrie-info_card .btn img {
+  width: 20%;
 }/*# sourceMappingURL=styles.css.map */

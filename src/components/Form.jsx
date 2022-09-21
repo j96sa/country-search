@@ -1,4 +1,4 @@
-import { faSearch, faXmark } from '@fortawesome/free-solid-svg-icons'
+import {  faHeart, faSearch, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
@@ -26,9 +26,15 @@ export default function Form({active,mainView,setMainView}) {
           )
         } 
 
-        <button onClick={!activeForm ?()=>setActiveForm(true) :()=>console.log("ok")}>
-          <FontAwesomeIcon icon={faSearch}/>
-        </button>
+        <section className='btn'>
+          <button className='fav-btn'>
+            <FontAwesomeIcon icon={faHeart}/>
+          </button>
+
+          <button className='search-btn' onClick={!activeForm ?()=>setActiveForm(true) :()=>console.log("ok")}>
+            <FontAwesomeIcon icon={faSearch}/>
+          </button>
+        </section>
       </div>
     </>
   )
