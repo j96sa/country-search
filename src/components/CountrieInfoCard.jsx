@@ -17,9 +17,7 @@ export default function CountrieInfoCard() {
           setApiResponse(res[0]);    
         }
         getApiData();
-    }, []);
-
-    console.log(apiResponse);
+    }, []);    
 
     return (
       <>
