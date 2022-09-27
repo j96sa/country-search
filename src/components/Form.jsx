@@ -9,12 +9,21 @@ export default function Form({active}) {
   //state per cambiare fra il input e il texto nel component <MainPage/>
   const [activeForm, setActiveForm] = useState(false);    
   //state per controllare cosa se mostra nell form <h2/> e a dove se redirige la pagina
-  const [url, setUrl] = useState("/continents");  
+  const [url, setUrl] = useState("/continents"); 
+  //state per controllare il form.value
+  const [formValue, setFormValue] = useState({country:""});
 
+  
   //effect per cambiare la url
   useEffect(() => {
     navigate(url);
-  }, [url])
+  }, [url]);
+
+
+  //const per aggiornare il form
+  const formChangeHandler =(e)=>{
+    setFormValue({...formValue,[e.target.name]:e.target.value})
+  };
   
   
   return (
@@ -31,7 +40,7 @@ export default function Form({active}) {
           
           :(
             <section className="input">
-              <input type="text" name="country" placeholder='Write a country name...?'/>
+              <input onChange={formChangeHandler} value={formValue.country} type="text" name="country" placeholder='Write a country name...?'/>
               <FontAwesomeIcon icon={faXmark} onClick={()=>setActiveForm(false)} />
             </section>
           )
@@ -42,7 +51,7 @@ export default function Form({active}) {
             <FontAwesomeIcon icon={faHeart}/>
           </button>
 
-          <button className='search-btn' onClick={!activeForm ?()=>setActiveForm(true) :()=>console.log("ok")}>
+          <button className='search-btn' onClick={!activeForm ?()=>setActiveForm(true) :()=>navigate(`/countrie/${formValue.country}`)}>
             <FontAwesomeIcon icon={faSearch}/>
           </button>
         </section>

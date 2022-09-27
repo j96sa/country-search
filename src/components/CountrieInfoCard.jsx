@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faHeart } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import EDNPOINTS from '../helpers/ENDPOINTS';
@@ -22,8 +20,9 @@ export default function CountrieInfoCard() {
     return (
       <>
         {
-            apiResponse &&
+            apiResponse 
 
+            ?
             <div className="countrie-info_card">
                 <figure>
                     <img src={apiResponse.flag} alt={apiResponse.name} />
@@ -47,6 +46,9 @@ export default function CountrieInfoCard() {
                     </section>
                 </section>
             </div>
+
+            :
+            <h1>SORRY</h1>
         }
       </>
     )
