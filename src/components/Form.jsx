@@ -1,11 +1,22 @@
 import {  faHeart, faSearch, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Form({active,mainView,setMainView}) {
+
+export default function Form({active}) {  
+  const navigate = useNavigate();
   //state per cambiare fra il input e il texto nel component <MainPage/>
-  const [activeForm, setActiveForm] = useState(false);
+  const [activeForm, setActiveForm] = useState(false);    
+  //state per controllare cosa se mostra nell form <h2/> e a dove se redirige la pagina
+  const [url, setUrl] = useState("/continents");  
 
+  //effect per cambiare la url
+  useEffect(() => {
+    navigate(url);
+  }, [url])
+  
+  
   return (
     <>      
       <div className={active ?"form active" :"form"}>
@@ -13,9 +24,9 @@ export default function Form({active,mainView,setMainView}) {
           !activeForm
           
           ?(
-            mainView==="continents"
-            ?<h2 onClick={()=>setMainView("countries")} >See All Countries</h2>
-            :<h2 onClick={()=>setMainView("continents")} >See Continents</h2>
+            url==="/continents"
+            ?<h2 onClick={()=>setUrl("/all-countries")} >See All Countries</h2>
+            :<h2 onClick={()=>setUrl("/continents")} >See Continents</h2>            
           )
           
           :(
