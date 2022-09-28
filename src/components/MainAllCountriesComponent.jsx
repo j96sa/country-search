@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import EDNPOINTS from '../helpers/ENDPOINTS';
 import { Fetch_Request } from '../helpers/restCountriestHTTPRequest';
 import CountrieCard from './CountrieCard';
+import Loading from './Loading';
 
 export default function MainAllCountriesComponent() {
     //state per caricare i dati de ogni paese
@@ -18,6 +19,12 @@ export default function MainAllCountriesComponent() {
     }, []);
 
     return (
-      apiResponse && apiResponse.map(e=><CountrieCard key={Math.round(Math.random()*Date.now())} countrie={e}/>)
+      <>
+      {
+        apiResponse
+        ?apiResponse.map(e=><CountrieCard key={Math.round(Math.random()*Date.now())} countrie={e}/>)
+        :<Loading/>
+      } 
+      </>       
     )
 }

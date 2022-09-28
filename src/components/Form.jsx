@@ -24,7 +24,17 @@ export default function Form({active}) {
   const formChangeHandler =(e)=>{
     setFormValue({...formValue,[e.target.name]:e.target.value})
   };
+
+  //keydown hadler
+  const keyDowFormHandler = (e)=>{
+    e.key==="Enter" && navigate(`/countrie/${formValue.country}`);
+  };
   
+  //constante per controllare il btn di cancelare nel form
+  const cancelFormBtn = ()=>{
+    setFormValue({country:""});
+    setActiveForm(false);
+  };
   
   return (
     <>      
@@ -40,8 +50,8 @@ export default function Form({active}) {
           
           :(
             <section className="input">
-              <input onChange={formChangeHandler} value={formValue.country} type="text" name="country" placeholder='Write a country name...?'/>
-              <FontAwesomeIcon icon={faXmark} onClick={()=>setActiveForm(false)} />
+              <input onKeyDown={(e)=>keyDowFormHandler(e)} onChange={formChangeHandler} value={formValue.country} type="text" name="country" placeholder='Write a country name...?'/>
+              <FontAwesomeIcon icon={faXmark} onClick={()=>cancelFormBtn()} />
             </section>
           )
         } 

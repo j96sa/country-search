@@ -109,7 +109,7 @@ body {
 }
 
 .countrie-info_card {
-  min-height: 100vh;
+  min-height: calc(100vh - 26px);
   background: #8B4FB3;
   font-family: "Kanit", sans-serif;
 }
@@ -139,4 +139,15 @@ body {
 }
 .countrie-info_card .btn img {
   width: 20%;
+}
+
+.loading {
+  height: calc(100vh - 26px);
+  background-color: #8B4FB3;
+  display: flex;
+  align-items: center;
+}
+.loading img {
+  margin: auto;
+  width: 150px;
 }/*# sourceMappingURL=styles.css.map */

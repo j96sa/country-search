@@ -1,0 +1,11 @@
+.loading{
+    height: calc(100vh - 26px);
+    background-color: $purple;
+    display: flex;
+    align-items: center;
+    img{
+        margin: auto;
+        width: 150px;
+    }
+
+}

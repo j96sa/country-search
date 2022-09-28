@@ -4,6 +4,7 @@ import EDNPOINTS from '../helpers/ENDPOINTS';
 import { Fetch_Request } from '../helpers/restCountriestHTTPRequest';
 import heart_empty from "../assets/heart.png";
 import heart_full from "../assets/heart-full.png";
+import Loading from './Loading';
 
 export default function CountrieInfoCard() {
     let {code} = useParams();
@@ -48,7 +49,7 @@ export default function CountrieInfoCard() {
             </div>
 
             :
-            <h1>SORRY</h1>
+            <Loading/>
         }
       </>
     )

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import EDNPOINTS from '../helpers/ENDPOINTS';
 import { Fetch_Request } from '../helpers/restCountriestHTTPRequest';
 import CountrieCard from './CountrieCard';
+import Loading from './Loading';
 
 export default function MainContinentCountriesComponent() {
     const {continent} = useParams();
@@ -19,8 +20,11 @@ export default function MainContinentCountriesComponent() {
 
     return (
       <>
-        {apiResponse && apiResponse.map(e=><CountrieCard e={e} key={Math.round(Math.random()*Date.now())}/>)}
+        {
+          apiResponse
+          ?apiResponse.map(e=><CountrieCard e={e} key={Math.round(Math.random()*Date.now())}/>)
+          :<Loading/>
+        }
       </>
     )
 }
-/* <CountrieCard countrie={e} key={Math.round(Math.random()*Date.now())}/> */
