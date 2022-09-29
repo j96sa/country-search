@@ -150,4 +150,18 @@ body {
 .loading img {
   margin: auto;
   width: 150px;
+}
+
+.error {
+  height: calc(100vh - 26px);
+  background-color: #8B4FB3;
+  text-align: center;
+}
+.error img {
+  margin-top: 80px;
+  width: 200px;
+}
+.error h2 {
+  width: 95%;
+  margin-top: 40px;
 }/*# sourceMappingURL=styles.css.map */
