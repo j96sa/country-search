@@ -133,6 +133,10 @@ body {
 .countrie-info_card article p span {
   color: gold;
 }
+.countrie-info_card article p.timezone {
+  display: flex;
+  flex-direction: column;
+}
 .countrie-info_card .btn {
   text-align: center;
   margin-top: 30px;
