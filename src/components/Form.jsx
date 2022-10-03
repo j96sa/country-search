@@ -35,6 +35,11 @@ export default function Form({active}) {
     setFormValue({country:""});
     setActiveForm(false);
   };
+
+  //validazione per il form
+  const formValidation = ()=>{
+    formValue.country!=="" && navigate(`/countrie/${formValue.country}`)    
+  };
   
   return (
     <>      
@@ -61,7 +66,7 @@ export default function Form({active}) {
             <FontAwesomeIcon icon={faHeart}/>
           </button>
 
-          <button className='search-btn' onClick={!activeForm ?()=>setActiveForm(true) :()=>navigate(`/countrie/${formValue.country}`)}>
+          <button className='search-btn' onClick={!activeForm ?()=>setActiveForm(true) :()=>formValidation()}>
             <FontAwesomeIcon icon={faSearch}/>
           </button>
         </section>
