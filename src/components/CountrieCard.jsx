@@ -1,13 +1,18 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function CountrieCard({countrie,e}) {
   const navigate = useNavigate();
+  const location = useLocation();
   
   const clickHandler = ()=>{
-    countrie
-    ?navigate(`/countrie/${countrie.name}`)
-    :navigate(`/countrie/${e.name.common}`)
+    if(location.pathname!=="/favorite-list"){
+      countrie
+      ?navigate(`/countrie/${countrie.name}`)
+      :navigate(`/countrie/${e.name.common}`)
+    }else{
+      navigate(`/favorite-list/${countrie.nativeName}`);
+    };
   };
 
   return (

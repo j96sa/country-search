@@ -62,7 +62,7 @@ export default function Form({active}) {
         } 
 
         <section className='btn'>
-          <button className='fav-btn'>
+          <button className='fav-btn' onClick={()=>navigate(`/favorite-list`)}>
             <FontAwesomeIcon icon={faHeart}/>
           </button>
 
