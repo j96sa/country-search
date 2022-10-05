@@ -14,8 +14,8 @@ const CountrieListProvider = ({children})=>{
     //effect per modificare il countrieList
     useEffect(() => {        
         if(addCountrie!==null){
-            if(countrieList.find(e=>e.nativeName===addCountrie.nativeName)){
-                const newCnLs = countrieList.filter(e=>e.nativeName!==addCountrie.nativeName);
+            if(countrieList.find(e=>e.ccn3===addCountrie.ccn3)){
+                const newCnLs = countrieList.filter(e=>e.ccn3!==addCountrie.ccn3);
                 setCountrieList(newCnLs);
             }else{                
                 setCountrieList([...countrieList,addCountrie]);

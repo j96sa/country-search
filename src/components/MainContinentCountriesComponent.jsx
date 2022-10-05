@@ -22,7 +22,7 @@ export default function MainContinentCountriesComponent() {
       <>
         {
           apiResponse
-          ?apiResponse.map(e=><CountrieCard e={e} key={Math.round(Math.random()*Date.now())}/>)
+          ?apiResponse.map(e=><CountrieCard countrie={e} key={Math.round(Math.random()*Date.now())}/>)
           :<Loading/>
         }
       </>
