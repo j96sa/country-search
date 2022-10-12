@@ -174,4 +174,13 @@ body {
   min-height: calc(100vh - 26px);
   background-color: #A32243;
   padding: 1px 0 45px 0;
+}
+
+.back_button {
+  color: #fff;
+  text-align: center;
+  width: 40%;
+}
+.back_button svg {
+  font-size: 2rem;
 }/*# sourceMappingURL=styles.css.map */

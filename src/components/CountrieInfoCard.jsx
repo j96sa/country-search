@@ -6,6 +6,7 @@ import heart_empty from "../assets/heart.png";
 import heart_full from "../assets/heart-full.png";
 import Loading from './Loading';
 import CountrieList from '../context/basicContext';
+import BackButton from './BackButton';
 
 export default function CountrieInfoCard() {
     const {setAddCountrie,countrieList} = useContext(CountrieList)
@@ -52,8 +53,6 @@ export default function CountrieInfoCard() {
         apiResponse && getNatNameLang();
     }, [apiResponse]);
     
-    
-    console.log(apiResponse);
 
     //const per controllare quando se aggiunge o se cancella un paese di la FavList
     const addFavHandler = ()=>{        
@@ -72,6 +71,7 @@ export default function CountrieInfoCard() {
             
                 ?
                 <div className="countrie-info_card">
+                    <BackButton/>
                     <figure>
                         <img src={apiResponse.flags.png} alt={apiResponse.name.common} />
                     </figure>
