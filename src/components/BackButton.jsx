@@ -7,8 +7,7 @@ export default function BackButton() {
     const {pathname} = useLocation();
     const navigate = useNavigate();
 
-    const backButtonHandler = ()=>{
-        //console.log(pathname);
+    const backButtonHandler = ()=>{        
         if(pathname==="/favorite-list"){
             navigate("/");
         }else if(pathname.includes("/favorite-list")){

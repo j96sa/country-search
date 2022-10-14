@@ -179,8 +179,14 @@ body {
 .back_button {
   color: #fff;
   text-align: center;
-  width: 40%;
+  width: 30%;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 .back_button svg {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.back_button:hover {
+  color: #FFF30A;
 }/*# sourceMappingURL=styles.css.map */
