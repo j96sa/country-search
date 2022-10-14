@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/country-search/static/css/main.c293a66b.css",
+    "main.js": "/country-search/static/js/main.6b7875c4.js",
+    "static/media/africa.jpg": "/country-search/static/media/africa.ceba6a96f91fa287a1e1.jpg",
+    "static/media/europ.jpg": "/country-search/static/media/europ.7bc87c50b7cb9dae7908.jpg",
+    "static/media/americas.jpg": "/country-search/static/media/americas.685b9bcdf4b75810bfa0.jpg",
+    "static/media/oceania.jpg": "/country-search/static/media/oceania.246a15683f7c27a27e05.jpg",
+    "static/media/asia.jpg": "/country-search/static/media/asia.59a8be06c8ff461fdbf7.jpg",
+    "static/media/heart.png": "/country-search/static/media/heart.ccdb8b169361c7dd3275.png",
+    "static/media/heart-full.png": "/country-search/static/media/heart-full.9460adc3935070ebf842.png",
+    "static/media/error_log.png": "/country-search/static/media/error_log.e0f867869a1e163cd4c8.png",
+    "index.html": "/country-search/index.html",
+    "static/media/tail-spin.svg": "/country-search/static/media/tail-spin.bcdd7dd844d90088bb761d3dca106190.svg",
+    "main.c293a66b.css.map": "/country-search/static/css/main.c293a66b.css.map",
+    "main.6b7875c4.js.map": "/country-search/static/js/main.6b7875c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c293a66b.css",
+    "static/js/main.6b7875c4.js"
+  ]
+}
