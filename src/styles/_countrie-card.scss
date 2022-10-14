@@ -3,10 +3,25 @@
     text-align: center;
     margin: 50px auto 0 auto;
     border: 5px solid $white;
+    color: $white;
+    cursor: pointer;
+    transition: .2s ease-in;
+    
+    figure{
+        overflow: hidden;
+        img{
+            width: 100%;
+            border-bottom:5px solid $white ;       
+            transition: .2s ease-in; 
+        }
+    }
 
+    &:hover{
+        border: 5px solid $yellow;
+        color: $yellow;
 
-    img{
-        width: 100%;
-        border-bottom:5px solid $white ;
+        img{
+            transform: scale(1.4);
+        }
     }
 }

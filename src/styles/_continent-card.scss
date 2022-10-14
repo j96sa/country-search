@@ -3,13 +3,28 @@
     text-align: center;
     margin: 70px auto 0 auto;
     border:5px solid $white;
+    color: $white;
+    transition: .2s ease-out;
+    cursor: pointer;
     
     &:first-child{
         margin-top: 0;
     }
 
-    img{
-        width: 100%;
-        border-bottom:5px solid $white ;
+    figure{
+        overflow: hidden;
+        img{
+            width: 100%;
+            border-bottom:5px solid $white ;
+            transition: .2s ease-out;
+        }
+    }
+
+    &:hover{
+        border:5px solid $yellow;
+        color: $yellow;
+        img{
+            transform: scale(1.4);
+        }
     }
 }

@@ -6,7 +6,7 @@ body, * {
 
 body {
   padding: 13px;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
 }
 
@@ -23,6 +23,7 @@ body {
   right: 0;
   top: 40px;
   transition: 0.4s ease-out;
+  z-index: 5000;
 }
 .form.active {
   transform: translatex(0);
@@ -72,13 +73,27 @@ body {
   text-align: center;
   margin: 70px auto 0 auto;
   border: 5px solid #fff;
+  color: #fff;
+  transition: 0.2s ease-out;
+  cursor: pointer;
 }
 .continent_card:first-child {
   margin-top: 0;
 }
-.continent_card img {
+.continent_card figure {
+  overflow: hidden;
+}
+.continent_card figure img {
   width: 100%;
   border-bottom: 5px solid #fff;
+  transition: 0.2s ease-out;
+}
+.continent_card:hover {
+  border: 5px solid #FFF30A;
+  color: #FFF30A;
+}
+.continent_card:hover img {
+  transform: scale(1.4);
 }
 
 .scrollUpBtn {
@@ -102,10 +117,24 @@ body {
   text-align: center;
   margin: 50px auto 0 auto;
   border: 5px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in;
 }
-.countrie_card img {
+.countrie_card figure {
+  overflow: hidden;
+}
+.countrie_card figure img {
   width: 100%;
   border-bottom: 5px solid #fff;
+  transition: 0.2s ease-in;
+}
+.countrie_card:hover {
+  border: 5px solid #FFF30A;
+  color: #FFF30A;
+}
+.countrie_card:hover img {
+  transform: scale(1.4);
 }
 
 .countrie-info_card {
@@ -143,6 +172,7 @@ body {
 }
 .countrie-info_card .btn img {
   width: 20%;
+  cursor: pointer;
 }
 
 .loading {

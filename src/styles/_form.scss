@@ -1,11 +1,11 @@
 .form{
     transform: translateX(110%);
     position: fixed;
-    text-align: end;
-    //right: 5px;
+    text-align: end;    
     right: 0;
     top: 40px;    
     transition: .4s ease-out;
+    z-index: 5000;
 
     &.active{
         transform: translatex(0);
