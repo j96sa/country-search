@@ -197,7 +197,9 @@ body {
 }
 .error h2 {
   width: 95%;
+  margin: auto;
   margin-top: 40px;
+  color: #fff;
 }
 
 .favorite_list {

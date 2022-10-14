@@ -17,7 +17,7 @@ export default function Loading() {
     <>
       <div className={error ?"error" :"loading"}>        
         <img src={error ?error_svg :loader_svg} alt="loader" />
-        {error && <h2>Sorry, we have not had any response from our server!</h2>}
+        {error && <h2>Sorry, we have not had any response from our server <br/><br/>:(</h2>}
       </div>
     </>
   )
