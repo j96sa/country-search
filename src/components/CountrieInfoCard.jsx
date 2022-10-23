@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import EDNPOINTS from '../helpers/ENDPOINTS';
 import { Fetch_Request } from '../helpers/restCountriestHTTPRequest';
 import heart_empty from "../assets/heart.png";
@@ -26,7 +26,7 @@ export default function CountrieInfoCard() {
         const getApiData = async()=>{
             const res = await Fetch_Request(`${EDNPOINTS.name}${code}`);
             setApiResponse(res[0]);
-
+            console.log(res[0]);
             const ID = res[0].ccn3;            
             
             //per sapere se il paese visualizato e gia salvato 
@@ -86,6 +86,7 @@ export default function CountrieInfoCard() {
                             <p>region: <span>{apiResponse.region}</span></p>
                             <p>sub-region: <span>{apiResponse.subregion}</span></p>
                             <p className='timezone'>timezone: {apiResponse.timezones.map(e=><span key={Math.round(Math.random()*Date.now())} >{e}</span>)}</p>
+                            <p><a href={apiResponse.maps.googleMaps} target="_blank">Google_Maps Link</a></p>
                         </article>
             
                         <section className='btn'>

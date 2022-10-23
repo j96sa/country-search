@@ -16,6 +16,17 @@ body {
   padding: 20px 0 30px 0;
 }
 
+.scrollUpBtn {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.scrollUpBtn:hover {
+  background-color: #8B4FB3;
+}
+.scrollUpBtn:hover svg {
+  color: #fff;
+}
+
 .form {
   transform: translateX(110%);
   position: fixed;
@@ -165,6 +176,13 @@ body {
 .countrie-info_card article p.timezone {
   display: flex;
   flex-direction: column;
+}
+.countrie-info_card article p:last-child {
+  text-align: center;
+  font-size: 1rem;
+}
+.countrie-info_card article p:last-child a {
+  color: #A32243;
 }
 .countrie-info_card .btn {
   text-align: center;
