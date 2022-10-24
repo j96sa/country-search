@@ -11,7 +11,9 @@ export default function FavoriteCountrieList() {
       <>
           <div className="favorite_list">
             <BackButton/>
-            {countrieList.map(e=><CountrieCard key={Math.round(Math.random()*Date.now())} countrie={e}/>)}
+            <section className="favorite_list-content">
+              {countrieList.map(e=><CountrieCard key={Math.round(Math.random()*Date.now())} countrie={e}/>)}
+            </section>
           </div>
       </>
     )

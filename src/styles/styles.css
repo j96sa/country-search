@@ -27,6 +27,15 @@ body {
   color: #fff;
 }
 
+@media screen and (min-width: 550px) {
+  .main_page-content {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 380px));
+    gap: 0 35px;
+  }
+}
 .form {
   transform: translateX(110%);
   position: fixed;
@@ -131,6 +140,9 @@ body {
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in;
+  /*  */
+  max-width: 424px;
+  /*  */
 }
 .countrie_card figure {
   overflow: hidden;
@@ -226,6 +238,15 @@ body {
   padding: 1px 0 45px 0;
 }
 
+@media screen and (min-width: 550px) {
+  .favorite_list-content {
+    gap: 0 35px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 380px));
+  }
+}
 .back_button {
   color: #fff;
   text-align: center;

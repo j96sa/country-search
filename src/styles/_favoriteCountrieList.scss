@@ -3,3 +3,13 @@
     background-color: $red-love;
     padding: 1px 0 45px 0;
 }
+
+@media screen and (min-width:550px) {
+    .favorite_list-content{
+        gap:0 35px ; 
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(380px, 380px));
+    }
+}
