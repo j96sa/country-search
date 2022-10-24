@@ -25,8 +25,7 @@ export default function CountrieInfoCard() {
         //const per ottenere i dati della API
         const getApiData = async()=>{
             const res = await Fetch_Request(`${EDNPOINTS.name}${code}`);
-            setApiResponse(res[0]);
-            console.log(res[0]);
+            setApiResponse(res[0]);            
             const ID = res[0].ccn3;            
             
             //per sapere se il paese visualizato e gia salvato 
@@ -72,15 +71,17 @@ export default function CountrieInfoCard() {
                 ?
                 <div className="countrie-info_card">
                     <BackButton/>
-                    <figure>
-                        <img src={apiResponse.flags.png} alt={apiResponse.name.common} />
-                    </figure>
+                    
                     <section className="info">
-                        <h2>{apiResponse.name.common}</h2>
+                        <figure>
+                            <img src={apiResponse.flags.png} alt={apiResponse.name.common} />
+                        </figure>
+                        
                         
                         <article>
+                            <h2>{apiResponse.name.common}</h2>
                             <p>area: <span>{apiResponse.area}km²</span></p>
-                            <p>capital: <span>{apiResponse.capital[0]}</span></p>
+                            {apiResponse.capital && <p>capital: <span>{apiResponse.capital[0]}</span></p>}
                             <p>language: <span>{language}</span></p>                          
                             <p>pupulation: <span>{apiResponse.population}</span></p>
                             <p>region: <span>{apiResponse.region}</span></p>
@@ -89,9 +90,10 @@ export default function CountrieInfoCard() {
                             <p><a href={apiResponse.maps.googleMaps} target="_blank">Google_Maps Link</a></p>
                         </article>
             
-                        <section className='btn'>
-                            <img onClick={()=>addFavHandler()} src={savedCountry ?heart_full :heart_empty} alt="add_to_favs" />
-                        </section>
+                    </section>
+
+                    <section className='btn'>
+                        <img onClick={()=>addFavHandler()} src={savedCountry ?heart_full :heart_empty} alt="add_to_favs" />
                     </section>
                 </div>
     
@@ -99,5 +101,5 @@ export default function CountrieInfoCard() {
                 <Loading/>
             }
         </>
-    )    
+    )
 }

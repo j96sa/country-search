@@ -205,6 +205,33 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 900px) {
+  .countrie-info_card .info {
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .countrie-info_card .info figure {
+    flex-grow: 1;
+    max-width: 700px;
+  }
+  .countrie-info_card .info article {
+    flex-grow: 8;
+    max-width: 300px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .countrie-info_card .info article h2 {
+    font-size: 3rem;
+  }
+  .countrie-info_card .info article p {
+    font-size: 1.5rem;
+  }
+  .countrie-info_card .btn img {
+    max-width: 150px;
+  }
+}
 .loading {
   height: calc(100vh - 26px);
   background-color: #8B4FB3;

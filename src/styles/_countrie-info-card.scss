@@ -46,3 +46,35 @@
         }
     }
 }
+
+@media screen and (min-width:900px) {
+    .countrie-info_card{
+        .info{
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            figure{
+                flex-grow: 1;
+                max-width: 700px;
+            }
+            article{
+                flex-grow: 8;
+                max-width: 300px;
+                margin-left: 20px;
+                text-align: center;
+                h2{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .btn{            
+            img{
+                max-width: 150px;
+            }
+        }
+    }
+}
